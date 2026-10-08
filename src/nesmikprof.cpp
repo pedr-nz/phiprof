@@ -33,7 +33,7 @@ namespace phiprof
    static std::mutex m;
 
    bool initialize(){
-      nesmik::nesmik_init();
+      nesmik::init();
       return true;
    }
 
@@ -89,7 +89,7 @@ namespace phiprof
    int initializeTimer([[maybe_unused]] const string &label, [[maybe_unused]] const string &group1, [[maybe_unused]] const string &group2, [[maybe_unused]]const string &group3){return initializeTimer(label);}
 
    bool print([[maybe_unused]] MPI_Comm comm, [[maybe_unused]] std::string fileNamePrefix){
-      nesmik::nesmik_finalize();
+      nesmik::finalize();
       return true;
    }
    

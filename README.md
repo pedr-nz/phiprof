@@ -33,6 +33,9 @@ Not supported
 compiler names. Phiprof should be compiled with a MPI compiler and
 openmp threading should be enabled. The compiler environment can also be
 set from the command line, for example "make CC=nvcc CCC=nvcc".
+   - Set `NESMIK_HOME` to the installation path of neSmiK;
+   - If using OpenMP, append `-fopenmp` to `CCFLAGS` and `LDFLAGS`,
+     setting it through command line will overwrite the required flags.
 
 3) make 
 
@@ -40,6 +43,7 @@ set from the command line, for example "make CC=nvcc CCC=nvcc".
 include/ . These can manually be moved to sensible locations, or one
 can add the correct -I and -L flags to the compiler commands. For
 shared library you may also need to add the path to LD_LIBRARY_PATH
+   - For neSmiK, link with `-lnesmikprof`
 
 
 
